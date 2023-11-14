@@ -18,10 +18,10 @@ docker tag reactjs-demo $DOCKER_USERNAME_MAIN/$IMAGE_NAME:latest
 docker tag reactjs-demo $DOCKER_USERNAME_PROD/$IMAGE_NAME:latest
 
 # Push the image to the appropriate Docker Hub repository based on the branch
-if [ "$git_branch" == "dev" ] || [ "$git_branch" == "origin/dev" ]; then
+if [ "$git_branch" == "dev" ] ; then
     echo "Deploying to prod repository..."
     docker push $DOCKER_USERNAME_PROD/$IMAGE_NAME:latest
-elif [ "$git_branch" == "main" ] || [ "$git_branch" == "origin/main" ]; then
+elif [ "$git_branch" == "master" ] ; then
     echo "Deploying to main repository..."
     docker push $DOCKER_USERNAME_MAIN/$IMAGE_NAME:latest
 else
