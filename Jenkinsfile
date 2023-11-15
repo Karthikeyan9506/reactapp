@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     // Run the build.sh script
-                    sh 'chmod +x build.sh'
+                    sh 'chmod +x ./scripts/build.sh'
                     sh './scripts/build.sh'
                 }
             }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     // Run the deploy.sh script
-                     sh 'chmod +x deploy.sh'
+                     sh 'chmod +x ./scripts/deploy.sh'
                     sh './scripts/deploy.sh'
                 }
             }
