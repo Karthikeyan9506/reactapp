@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     // Run the build.sh script
-                    sh 'scripts/build.sh'
+                    sh './scripts/build.sh'
                 }
             }
         }
@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     // Run the deploy.sh script
-                    sh 'scripts/deploy.sh'
+                    sh './scripts/deploy.sh'
                 }
             }
         }
